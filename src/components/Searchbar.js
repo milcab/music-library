@@ -2,9 +2,9 @@
 
 import { useState } from 'react'
 
-let [searchTerm, setSearchTerm] = useState('')
 
 function Searchbar(props) {
+    let [searchTerm, setSearchTerm] = useState('')
     return (
         <form>
             <input type="text" placeholder="Enter a search term here" />
