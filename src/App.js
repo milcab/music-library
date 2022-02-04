@@ -9,14 +9,14 @@ function App() {
   let [data, setData] = useState([])
 
   const API_URL = 'https://itunes.apple.com/search?term=the%20grateful%20dead'
-  
+
   useEffect(() => {
     const fetchData = async () => {
       document.title = `${search} Music`
       const response = await fetch(API_URL + search)
       const resData = await response.json()
       console.log(resData)
-      if(resData.results.length > 0) {
+      if (resData.results.length > 0) {
         setData(resData.results)
       } else {
         setMessage('Not Found')
@@ -35,6 +35,7 @@ function App() {
     <div>
       <Searchbar handleSearch={handleSearch} />
       {message}
+      test 1
       <Gallery data={data} />
     </div>
   )
